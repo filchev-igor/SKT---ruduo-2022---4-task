@@ -19,7 +19,7 @@ export const ParagraphPage = () => {
         });
 
         $('#buttonChangeSpecificParagraph').on('click', () => {
-            const paragraphNumber = $('#textParagraph').val();
+            const paragraphNumber = Number($('#textParagraph').val());
             const newParagraphText = $('#text2').val()?.toString();
 
             if (!paragraphNumber || !newParagraphText)
@@ -30,6 +30,8 @@ export const ParagraphPage = () => {
 
             if (paragraphNumber < 1 || paragraphNumber > 5)
                 return;
+
+            console.log(Number(paragraphNumber), paragraphNumber);
 
             lastEditedParagraph = Number(paragraphNumber);
 
