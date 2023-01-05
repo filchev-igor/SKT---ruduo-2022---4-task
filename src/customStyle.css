@@ -1,8 +1,36 @@
+:root {
+    --paragraph-color: red;
+}
+
 .grid-container {
     display: grid;
+
     grid-template-columns: auto auto;
+    grid-gap: 1rem 20rem;
+
+    text-align: left;
 }
 
 .grid-container-full-width {
     grid-column: 1 / -1;
 }
+
+.text-align-center {
+    text-align: center;
+}
+
+.action-block > div {
+    margin-bottom: 1rem;
+}
+
+.text {
+    display: grid;
+
+    grid-gap: 1rem 0;
+}
+
+.text > div > span:first-child {
+    color: var(--paragraph-color);
+}
+
+
